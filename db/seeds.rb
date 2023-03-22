@@ -5,66 +5,10 @@
 # #
 # #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 # #   Character.create(name: "Luke", movie: movies.first)
-# puts "Creating pizzas"
-# pizzas = []
-# pizzas << Pizza.create(name:"Marinara", ingredients:"tomatoes, garlic, oregano, and extra virgin olive oil")
-# pizzas << Pizza.create(name:"Margherita", ingredients:"tomatoes, sliced mozzarella, basil, and extra virgin olive oil")
-# pizzas << Pizza.create(name:"Margherita extra", ingredients:"tomatoes, mozzarella from Campania, basil, and extra virgin olive oil")
-# pizzas << Pizza.create(name:"Cheese", ingredients:"Dough, Tomato Sauce, Cheese")
-# pizzas << Pizza.create(name:"Pepperoni", ingredients:"Dough, Tomato Sauce, Cheese, Pepperoni")
 
-
-# puts "Creating restaurants"
-# restaurants = []
-# 10.times do
-#     restaurants << Restaurant.create(name: Faker::Restaurant.name, address:Faker::Address.full_address)
-# end
-
-# puts "creating restaurant-pizzas"
-# 10.times do
-#     RestaurantPizza.create(price: rand(2..29), pizza_id: pizzas.sample.id, restaurant_id: restaurants.sample.id)
-# end
-
-# Pizza.destroy_all
-# Restaurant.destroy_all
-
-# puts 'Seeding Pizzas...'
-
-# 20.times do
-#   Pizza.create(
-#     [{ name: Faker::Food.dish, ingredients: Faker::Food.description }],
-#   )
-# end
-
-# puts 'Done seeding Pizzas!'
-
-# puts 'Seeding Restaurants...'
-
-# 20.times do
-#   Restaurant.create(
-#     [{ name: Faker::Restaurant.name, address: Faker::Address.full_address }],
-#   )
-# end
-# puts 'Done seeding Restaurants!'
-
-# puts 'Seeding restaurant pizzas...'
-
-# 20.times do
-#   RestaurantPizza.create(
-#     [
-#       {
-#         restaurant_id: rand(1..20),
-#         pizza_id: rand(1..20),
-#         price: rand(1...30)
-#       },
-#     ],
-#   )
-# end
-
-# puts 'Done seeding restaurant pizzas!'
 
 # Create 10 restaurants
-puts "started seeeeedding!!"
+puts "started seeding!!"
 
 10.times do
   name = Faker::Restaurant.name
@@ -87,4 +31,4 @@ end
   RestaurantPizza.create(price: price, pizza_id: pizza_id, restaurant_id: restaurant_id)
 end
 
-puts "Compleeeted seeeding!!!"
+puts "Completed seeding!!!"
